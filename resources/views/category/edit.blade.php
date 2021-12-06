@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
+@include('navbar')
 
 <div class="container">
     <div class="row my-5">
