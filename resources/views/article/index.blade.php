@@ -19,6 +19,7 @@
                 <tr>
                     <th>#</th>
                     <th>Title</th>
+                    <th>Category</th>
                     <th>Control</th>
                     <th>Created_at</th>
                 </tr>
@@ -28,8 +29,13 @@
                     <tr>
                         <td>{{ $article->id }}</td>
                         <td>{{ $article->title }}</td>
+                        <td>{{ $article->category_id }}</td>
                         <td>
-
+                            <form action="{{ route('article.destroy',$article->id) }}" class="d-inline-block" method="post">
+                                @csrf
+                                @method('delete')
+                                <button class="btn btn-outline-danger">Delete</button>
+                            </form>
                         </td>
                         <td>{{ $article->created_at }}</td>
                     </tr>
