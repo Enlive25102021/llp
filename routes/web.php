@@ -13,8 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+use App\Http\Controllers\ArticleController;
+
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::resource("category",\App\Http\Controllers\CategoryController::class);
+Route::resource('article',ArticleController::class);
