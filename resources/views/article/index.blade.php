@@ -31,6 +31,8 @@
                         <td>{{ $article->title }}</td>
                         <td>{{ $article->category_id }}</td>
                         <td>
+                            <a href="{{ route('article.show',$article->id) }}" class="btn btn-outline-info">Detail</a>
+                            <a href="{{ route('article.edit',$article->id) }}" class="btn btn-outline-warning">Edit</a>
                             <form action="{{ route('article.destroy',$article->id) }}" class="d-inline-block" method="post">
                                 @csrf
                                 @method('delete')
