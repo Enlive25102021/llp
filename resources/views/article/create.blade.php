@@ -14,7 +14,7 @@
     <div class="row my-5">
         <div class="col-12">
             <h4>Create Article</h4>
-            <form action="{{ route('category.store') }}" method="post">
+            <form action="{{ route('article.store') }}" method="post">
                 @csrf
                 <div class="mb-3">
                     <label class="form-label">Article Title</label>
